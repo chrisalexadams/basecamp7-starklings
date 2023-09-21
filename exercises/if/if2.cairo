@@ -11,11 +11,11 @@ fn foo_if_fizz(fizzish: felt252) -> felt252 {
     // 'fizz', return 'foo'
     // 'fuzz', return 'bar'
     // anything else, return 'baz'
-    if fizzish == 'fizz' {
+    if fizzish == 'fizz'.into() {
         'foo';
-    } else if fizzish == 'fuzz' {
+    } else if fizzish == 'fuzz'.into() {
         'bar'; 
-    } else {
+    } else if fizzish == 'literally anything'.into() {
         'baz';
     }
 }
